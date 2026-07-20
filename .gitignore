@@ -8,6 +8,15 @@ Desktop.ini
 *.swo
 *~
 
+# Codex/local attachment scratch space
+.codex-remote-attachments/
+.codex/
+.agents/
+
+# Local-only preview/runtime files
+.tailscale/
+tailscale-serve.json
+
 # Environment and secrets
 .env
 .env.*

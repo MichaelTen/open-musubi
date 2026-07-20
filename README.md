@@ -13,6 +13,12 @@ The project is starting from a simple premise: as more autonomous and semi-auton
 
 This repository is only a stub right now. The shape will evolve as the core model, interfaces, and first experiments become clearer.
 
+## Website Mockup
+
+This repository includes a static webpage mockup in [index.html](index.html). It is designed to work as plain HTML/CSS, so it can be previewed locally through Laragon or published later from a static host.
+
+See [roadmap/potential-roadmap.md](roadmap/potential-roadmap.md) for a potential roadmap.
+
 ## License
 
 Open Musubi is free software licensed under the GNU Affero General Public License v3.0 or later. See [LICENSE](LICENSE) for the full license text.
