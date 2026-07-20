@@ -1,0 +1,12 @@
+.git
+.agents
+.codex
+.codex-remote-attachments
+.tailscale
+tmp
+temp
+logs
+node_modules
+.env
+.env.*
+*.log

@@ -19,6 +19,10 @@ This repository includes a static webpage mockup in [index.html](index.html). It
 
 See [roadmap/potential-roadmap.md](roadmap/potential-roadmap.md) for a potential roadmap.
 
+## Deployment
+
+The included [Dockerfile](Dockerfile) serves the static site with Nginx on port 8080 for hosts such as Fly.io.
+
 ## License
 
 Open Musubi is free software licensed under the GNU Affero General Public License v3.0 or later. See [LICENSE](LICENSE) for the full license text.
