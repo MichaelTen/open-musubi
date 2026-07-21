@@ -17,7 +17,7 @@ This repository is only a stub right now. The shape will evolve as the core mode
 
 This repository includes a static webpage mockup in [index.html](index.html). It is designed to work as plain HTML/CSS, so it can be previewed locally through Laragon or published later from a static host.
 
-See [roadmap/potential-roadmap.md](roadmap/potential-roadmap.md) for a potential roadmap.
+See [roadmap/potential-roadmap.md](roadmap/potential-roadmap.md) for the current working roadmap.
 
 ## Deployment
 

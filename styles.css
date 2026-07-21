@@ -48,7 +48,7 @@ a {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding: 1rem clamp(1rem, 4vw, 3rem);
+  padding: 0.7rem clamp(1rem, 4vw, 3rem);
   border-bottom: 1px solid var(--line);
   background: rgba(18, 18, 22, 0.84);
   backdrop-filter: blur(18px);
@@ -68,20 +68,20 @@ a {
 }
 
 .brand img {
-  width: 2.25rem;
-  height: 2.25rem;
+  width: 2rem;
+  height: 2rem;
   border-radius: 8px;
 }
 
 .nav {
-  gap: 0.25rem;
+  gap: 0.15rem;
   flex-wrap: wrap;
   justify-content: flex-end;
 }
 
 .nav a {
-  min-height: 2.25rem;
-  padding: 0.55rem 0.8rem;
+  min-height: 2rem;
+  padding: 0.45rem 0.7rem;
   border-radius: 8px;
   color: var(--muted);
   font-size: 0.94rem;
@@ -100,11 +100,11 @@ main {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.78fr);
+  grid-template-columns: minmax(0, 1.05fr) minmax(17rem, 0.82fr);
   align-items: center;
-  gap: clamp(2rem, 6vw, 5rem);
-  min-height: calc(100vh - 4.6rem);
-  padding: clamp(3rem, 7vw, 6rem) 0;
+  gap: clamp(1.5rem, 5vw, 4rem);
+  min-height: min(40rem, calc(100vh - 4.2rem));
+  padding: clamp(2rem, 5vw, 4rem) 0 clamp(2.5rem, 5vw, 4.5rem);
 }
 
 .eyebrow {
@@ -126,7 +126,7 @@ p {
 h1 {
   max-width: 11ch;
   margin-bottom: 1rem;
-  font-size: clamp(4rem, 10vw, 8.6rem);
+  font-size: clamp(3.8rem, 8.2vw, 7.1rem);
   line-height: 0.9;
   letter-spacing: 0;
 }
@@ -145,7 +145,7 @@ h3 {
 
 .lede {
   max-width: 42rem;
-  margin-bottom: 1.8rem;
+  margin-bottom: 1.4rem;
   color: var(--muted);
   font-size: clamp(1.05rem, 2vw, 1.28rem);
 }
@@ -195,7 +195,7 @@ h3 {
 
 .hero-art img {
   display: block;
-  width: min(100%, 31rem);
+  width: min(100%, 26rem);
   margin-inline: auto;
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 8px;
@@ -206,8 +206,8 @@ h3 {
   justify-content: space-between;
   gap: 0.75rem;
   flex-wrap: wrap;
-  margin-bottom: 5rem;
-  padding: 0.85rem;
+  margin-bottom: 3.5rem;
+  padding: 0.6rem;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.05);
@@ -221,7 +221,7 @@ h3 {
 }
 
 .section {
-  padding: clamp(3rem, 7vw, 5rem) 0;
+  padding: clamp(2.75rem, 5vw, 4.25rem) 0;
   border-top: 1px solid var(--line);
 }
 
@@ -369,21 +369,148 @@ dd {
   font-weight: 800;
 }
 
-.roadmap-callout {
+.section-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(2rem, 6vw, 5rem);
+  align-items: end;
+  margin-bottom: 2rem;
+}
+
+.section-intro > p {
+  max-width: 40rem;
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.06rem;
+}
+
+.roadmap {
+  padding-bottom: clamp(3.5rem, 6vw, 5rem);
+}
+
+.roadmap-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.roadmap-card,
+.roadmap-questions,
+.roadmap-note {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(26, 26, 34, 0.84);
+}
+
+.roadmap-card {
+  min-width: 0;
+  padding: 1.25rem;
+}
+
+.roadmap-card.now {
+  border-top: 3px solid var(--pink);
+}
+
+.roadmap-card.next {
+  border-top: 3px solid var(--blue);
+}
+
+.roadmap-card.later {
+  border-top: 3px solid var(--orange);
+}
+
+.roadmap-card-heading {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1.5rem;
-  padding-bottom: 5rem;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
 }
 
-.roadmap-callout > div {
-  max-width: 44rem;
+.phase-number {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.roadmap-card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.roadmap-card > p {
+  min-height: 3.2rem;
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.roadmap-list,
+.question-list {
+  display: grid;
+  gap: 0.75rem;
+  margin: 1.25rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.roadmap-list li,
+.question-list li {
+  position: relative;
+  padding-left: 1rem;
+  color: var(--muted);
+}
+
+.roadmap-list li::before,
+.question-list li::before {
+  position: absolute;
+  top: 0.65em;
+  left: 0;
+  width: 0.35rem;
+  height: 0.35rem;
+  border-radius: 50%;
+  background: var(--purple);
+  content: "";
+}
+
+.roadmap-bottom {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(15rem, 0.9fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.roadmap-questions,
+.roadmap-note {
+  padding: 1.25rem;
+}
+
+.roadmap-questions .eyebrow {
+  margin-bottom: 0;
+}
+
+.roadmap-note {
+  background:
+    linear-gradient(135deg, rgba(155, 77, 255, 0.15), transparent 60%),
+    rgba(26, 26, 34, 0.84);
+}
+
+.note-label {
+  display: block;
+  margin-bottom: 0.6rem;
+  color: var(--text);
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.roadmap-note p {
+  margin: 0;
+  color: var(--muted);
 }
 
 @media (max-width: 860px) {
-  .site-header,
-  .roadmap-callout {
+  .site-header {
     align-items: stretch;
     flex-direction: column;
   }
@@ -394,7 +521,10 @@ dd {
 
   .hero,
   .split,
-  .workspace {
+  .workspace,
+  .section-intro,
+  .roadmap-grid,
+  .roadmap-bottom {
     grid-template-columns: 1fr;
   }
 
@@ -408,11 +538,11 @@ dd {
   }
 
   .hero-art img {
-    width: min(100%, 24rem);
+    width: min(100%, 20rem);
   }
 
   .status-strip {
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
   }
 }
 

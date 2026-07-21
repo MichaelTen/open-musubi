@@ -20,7 +20,6 @@
         <a href="#protocol">Protocol</a>
         <a href="#collaboration">Collaboration</a>
         <a href="#roadmap">Roadmap</a>
-        <a href="roadmap/potential-roadmap.md">Notes</a>
       </nav>
     </header>
 
@@ -35,7 +34,7 @@
           </p>
           <div class="hero-actions" aria-label="Primary actions">
             <a class="button primary" href="#collaboration">View Mockup</a>
-            <a class="button secondary" href="roadmap/potential-roadmap.md">Potential Roadmap</a>
+            <a class="button secondary" href="#roadmap">Current Roadmap</a>
           </div>
         </div>
         <div class="hero-art" aria-label="Open Musubi emblem">
@@ -132,16 +131,73 @@
         </aside>
       </section>
 
-      <section id="roadmap" class="section roadmap-callout">
-        <div>
-          <p class="eyebrow">Next Notes</p>
-          <h2>Potential roadmap</h2>
+      <section id="roadmap" class="section roadmap" aria-labelledby="roadmap-title">
+        <div class="section-intro">
+          <div>
+            <p class="eyebrow">Current Roadmap</p>
+            <h2 id="roadmap-title">Build the coordination layer in public.</h2>
+          </div>
           <p>
-            A short public planning note is available in the repository. It is intentionally
-            labeled as potential direction, not a fixed commitment.
+            This is the working direction for the next set of experiments. It will change as
+            the signal model, protocol constraints, and early collaboration flows become clearer.
           </p>
         </div>
-        <a class="button primary" href="roadmap/potential-roadmap.md">Open Roadmap</a>
+
+        <div class="roadmap-grid">
+          <article class="roadmap-card now">
+            <div class="roadmap-card-heading">
+              <span class="phase-number">01</span>
+              <span class="tag pink">Now</span>
+            </div>
+            <h3>Define the signal model</h3>
+            <p>Make the smallest useful set of identity and reputation primitives concrete.</p>
+            <ul class="roadmap-list">
+              <li>Identity and contribution signal shapes</li>
+              <li>Memo records for context, fees, and receipts</li>
+            </ul>
+          </article>
+
+          <article class="roadmap-card next">
+            <div class="roadmap-card-heading">
+              <span class="phase-number">02</span>
+              <span class="tag blue">Next</span>
+            </div>
+            <h3>Prototype coordination</h3>
+            <p>Turn the model into small, inspectable flows that agents and people can review.</p>
+            <ul class="roadmap-list">
+              <li>Reference interface for agent handoffs</li>
+              <li>Portable trust and contribution views</li>
+            </ul>
+          </article>
+
+          <article class="roadmap-card later">
+            <div class="roadmap-card-heading">
+              <span class="phase-number">03</span>
+              <span class="tag orange">Explore</span>
+            </div>
+            <h3>Test settlement and trust</h3>
+            <p>Learn which lightweight signals stay useful without becoming noisy or gameable.</p>
+            <ul class="roadmap-list">
+              <li>Reasonable BCH fee flows across tools</li>
+              <li>Human review and scoring experiments</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="roadmap-bottom">
+          <div class="roadmap-questions">
+            <p class="eyebrow">Open questions</p>
+            <ul class="question-list">
+              <li>Which signals should be public by default, optional, or private?</li>
+              <li>How can fee proposals stay understandable without becoming rigid?</li>
+              <li>What reputation data is useful without becoming noisy or gameable?</li>
+            </ul>
+          </div>
+          <aside class="roadmap-note">
+            <span class="note-label">Working direction</span>
+            <p>Current does not mean fixed. The roadmap stays deliberately lightweight while the core model is tested in the open.</p>
+          </aside>
+        </div>
       </section>
     </main>
   </body>
