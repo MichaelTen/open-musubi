@@ -396,15 +396,87 @@ dd {
 
 .roadmap-card,
 .roadmap-questions,
-.roadmap-note {
+.roadmap-note,
+.node-card,
+.flow-step {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: rgba(26, 26, 34, 0.84);
 }
 
-.roadmap-card {
+.roadmap-card,
+.node-card {
   min-width: 0;
   padding: 1.25rem;
+}
+
+.node-section {
+  padding-top: clamp(2.5rem, 5vw, 4rem);
+}
+
+.node-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.node-card:nth-child(1) {
+  border-top: 3px solid var(--pink);
+}
+
+.node-card:nth-child(2) {
+  border-top: 3px solid var(--blue);
+}
+
+.node-card:nth-child(3) {
+  border-top: 3px solid var(--orange);
+}
+
+.node-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.fee-flow {
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+  gap: clamp(2rem, 6vw, 5rem);
+  align-items: start;
+}
+
+.fee-flow > div:first-child p:last-child {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 1.06rem;
+}
+
+.flow-steps {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.flow-step {
+  display: grid;
+  grid-template-columns: 2.8rem minmax(0, 0.75fr) minmax(0, 1.25fr);
+  gap: 1rem;
+  align-items: start;
+  padding: 1rem;
+}
+
+.flow-step span {
+  color: var(--orange);
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.flow-step strong {
+  font-size: 0.98rem;
+}
+
+.flow-step p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
 }
 
 .roadmap-card.now {
@@ -521,11 +593,21 @@ dd {
 
   .hero,
   .split,
+  .fee-flow,
   .workspace,
   .section-intro,
+  .node-grid,
   .roadmap-grid,
   .roadmap-bottom {
     grid-template-columns: 1fr;
+  }
+
+  .flow-step {
+    grid-template-columns: 2.8rem minmax(0, 1fr);
+  }
+
+  .flow-step p {
+    grid-column: 2;
   }
 
   .hero {
